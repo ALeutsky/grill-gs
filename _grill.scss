@@ -1,0 +1,45 @@
+$grill-ns: grill !default;
+
+@mixin grill($vs, $hs) {
+  &.#{$grill-ns}-root {
+    padding: $vs $hs;
+  }
+
+  .#{$grill-ns}-row + .#{$grill-ns}-row {
+    margin-top: $vs;
+  }
+
+  .#{$grill-ns}-col + .#{$grill-ns}-col {
+    margin-left: $hs;
+  }
+}
+
+@mixin grill-w($horizontal-spacing, $columns-num, $column-width) {
+  @for $i from 1 through $columns-num {
+    .#{$grill-ns}-w#{$i} {
+      width: $column-width * $i + $horizontal-spacing * ($i - 1);
+    }
+  }
+}
+
+.#{$grill-ns}-row {
+  display: block;
+  margin: 0px;
+  position: relative;
+
+  &:after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+.#{$grill-ns}-col {
+  display: block;
+  float: left;
+  position: relative;
+}
+
+.#{$grill-ns}-right {
+  float: right;
+}

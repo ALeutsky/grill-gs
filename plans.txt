@@ -1,0 +1,10 @@
+@mixin grill-cols($cols-num, $width)
+  .grill-2cols: has children classes .grill-1w and .grill-2w
+  .grill-3cols: has children classes .grill-1w, .grill-2w, .grill-3w
+  ...
+
+  .grill-1w: $width / $cols-num
+  .grill-2w: 2 * $width / $cols-num
+  ...
+
+stretching concept

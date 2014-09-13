@@ -1,0 +1,12 @@
+@import "compass";
+@import "compass/reset";
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+@import "../../grill";
+
+@include grill-w(0, 10, 10%);
