@@ -1,0 +1,9 @@
+@mixin grill-cols($cols, $width: 100%) {
+  .#{$grill-ns}-#{$cols}cols {
+    .#{$grill-ns}-col {
+      width: $width / $cols;
+    }
+
+    @include grill-w(0, $cols, $width / $cols);
+  }
+}

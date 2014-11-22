@@ -8,5 +8,7 @@
 }
 
 @import "../../grill";
+@import "../../grill.helpers";
 
 @include grill-w(0, 10, 10%);
+@include grill-cols(4);

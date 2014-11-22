@@ -14,10 +14,10 @@ $grill-ns: grill !default;
   }
 }
 
-@mixin grill-w($horizontal-spacing, $columns-num, $column-width) {
-  @for $i from 1 through $columns-num {
+@mixin grill-w($hspacing, $cols, $col-width) {
+  @for $i from 1 through $cols {
     .#{$grill-ns}-w#{$i} {
-      width: $column-width * $i + $horizontal-spacing * ($i - 1);
+      width: $col-width * $i + $hspacing * ($i - 1);
     }
   }
 }

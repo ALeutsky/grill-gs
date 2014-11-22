@@ -122,3 +122,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .grill-w10 {
   width: 100%;
 }
+
+.grill-4cols .grill-col {
+  width: 25%;
+}
+.grill-4cols .grill-w1 {
+  width: 25%;
+}
+.grill-4cols .grill-w2 {
+  width: 50%;
+}
+.grill-4cols .grill-w3 {
+  width: 75%;
+}
+.grill-4cols .grill-w4 {
+  width: 100%;
+}
