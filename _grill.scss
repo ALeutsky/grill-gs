@@ -1,28 +1,9 @@
-$grill-ns: grill !default;
+/**  OPTIONS  **/
+$grill-prefix: grill !default;
 
-@mixin grill($vs, $hs) {
-  &.#{$grill-ns}-root {
-    padding: $vs $hs;
-  }
 
-  .#{$grill-ns}-row + .#{$grill-ns}-row {
-    margin-top: $vs;
-  }
-
-  .#{$grill-ns}-col + .#{$grill-ns}-col {
-    margin-left: $hs;
-  }
-}
-
-@mixin grill-w($hspacing, $cols, $col-width) {
-  @for $i from 1 through $cols {
-    .#{$grill-ns}-w#{$i} {
-      width: $col-width * $i + $hspacing * ($i - 1);
-    }
-  }
-}
-
-.#{$grill-ns}-row {
+/**  BASE CLASSES  **/
+.#{$grill-prefix}-row {
   display: block;
   margin: 0px;
   position: relative;
@@ -34,12 +15,44 @@ $grill-ns: grill !default;
   }
 }
 
-.#{$grill-ns}-col {
+.#{$grill-prefix}-col {
   display: block;
   float: left;
   position: relative;
 }
 
-.#{$grill-ns}-right {
+.#{$grill-prefix}-right {
   float: right;
+}
+
+
+
+/**  HELPERS  **/
+
+/**
+ *
+ */
+@mixin grill($vspacing: 0px, $hspacing: 0px) {
+  &.#{$grill-prefix}-root {
+    padding: $vspacing $hspacing;
+  }
+
+  .#{$grill-prefix}-row + .#{$grill-prefix}-row {
+    margin-top: $vspacing;
+  }
+
+  .#{$grill-prefix}-col + .#{$grill-prefix}-col {
+    margin-left: $hspacing;
+  }
+}
+
+/**
+ * 
+ */
+@mixin grill-w($hspacing, $cols, $col-width) {
+  @for $i from 1 through $cols {
+    .#{$grill-prefix}-w#{$i} {
+      width: $col-width * $i + $hspacing * ($i - 1);
+    }
+  }
 }
