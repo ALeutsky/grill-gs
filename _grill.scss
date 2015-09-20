@@ -3,8 +3,11 @@ $grill-prefix: grill !default;
 
 
 /**  BASE CLASSES  **/
+/**
+ * ROW
+ */
 .#{$grill-prefix}-row {
-  display: block;
+  display: block !important;
   margin: 0px;
   position: relative;
 
@@ -15,12 +18,18 @@ $grill-prefix: grill !default;
   }
 }
 
+/**
+ * COL
+ */
 .#{$grill-prefix}-col {
-  display: block;
+  display: block !important;
   float: left;
   position: relative;
 }
 
+/**
+ * Float right
+ */
 .#{$grill-prefix}-right {
   float: right;
 }
