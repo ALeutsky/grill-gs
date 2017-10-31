@@ -1,3 +1,4 @@
 {
-  "name": "Grill GS"
+  "name": "Grill GS",
+  "main": "index.js"
 }
