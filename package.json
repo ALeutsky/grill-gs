@@ -1,0 +1,19 @@
+{
+  "name": "grill-gs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "_grill.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://aleutsky@github.com/ALeutsky/grill-gs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALeutsky/grill-gs/issues"
+  },
+  "homepage": "https://github.com/ALeutsky/grill-gs#readme"
+}
